@@ -1,0 +1,8 @@
+Environment                | Units | MaxLat(ms) | Critical | Ranked Requirements
+----------------------------------------------------------------------------------------------------------------
+Bedside Patient Monitors   |   500 |       10.0 |      YES | 1.Response(<10ms) 2.Reliability 3.Security 4.Throughput 5.Battery(AC+UPS)
+Nurses Handheld Tablets    |   120 |      150.0 |       NO | 1.Battery(12h shift) 2.Security 3.Response 4.Reliability 5.Throughput
+Doctors Workstations       |    80 |      100.0 |       NO | 1.Response/UI 2.Throughput 3.Security 4.Reliability 5.Battery(N/A)
+Central Database Server    |     2 |       20.0 |      YES | 1.Reliability(99.999%) 2.Security 3.Throughput 4.Response 5.Battery(N/A)
+MRI Imaging Server         |     1 |      500.0 |       NO | 1.Throughput(Parallel) 2.Reliability 3.Security 4.Response 5.Battery(N/A)
+Partner Hospital Link      |     3 |      250.0 |       NO | 1.Security(mTLS/HIPAA) 2.Reliability 3.Throughput 4.Response 5.Battery(N/A)
