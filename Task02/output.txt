@@ -1,0 +1,11 @@
+Database Availability Comparison:
+  Single SMP Server Availability : 99.5000% (Downtime/yr: 43.8 hours)
+  2-Node Active-Passive Cluster  : 99.997500% (Downtime/yr: 0.22 hours)
+
+MRI Server SMP Speedup (Amdahl's Law, P = 0.92):
+  N =  1 processors -> Speedup =  1.00x
+  N =  4 processors -> Speedup =  3.23x
+  N =  8 processors -> Speedup =  5.13x
+  N = 16 processors -> Speedup =  7.27x
+  N = 32 processors -> Speedup =  9.20x
+  N = 64 processors -> Speedup = 10.60x
