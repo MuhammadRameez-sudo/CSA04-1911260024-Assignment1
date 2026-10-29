@@ -1,0 +1,5 @@
+OS Structure Service Request Benchmark (50000 iterations):
+  Monolithic Kernel (1 direct system call)     :  1565.0 ns/request
+  Microkernel IPC (2 context switches + msg)   : 46196.2 ns/request
+  Latency Ratio (Microkernel / Monolithic)     :   29.52x
+  Worst-case 10ms monitor budget utilization   : 0.4620% (Microkernel safe within 10ms)
