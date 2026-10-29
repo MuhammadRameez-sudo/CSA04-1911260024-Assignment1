@@ -1,0 +1,4 @@
+Parent (DB Guard): Patient record mapped at 0x7eb027bbd000 with PROT_READ only.
+Child (Untrusted Program): Attempting unauthorized write to protected page...
+OS Protection Enforced: Child terminated by signal 11 (SIGSEGV - Segmentation Fault).
+Parent Verification   : Record intact -> 'CONFIDENTIAL_PATIENT_RECORD_ID_1042'
