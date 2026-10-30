@@ -1,0 +1,29 @@
+buffer    1 bytes: 10001 read() calls
+buffer  512 bytes:    21 read() calls
+buffer 4096 bytes:     4 read() calls
+buffer    1 bytes: 10001 read() calls
+buffer  512 bytes:    21 read() calls
+buffer 4096 bytes:     4 read() calls
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 59.23    0.271884          27     10027           write
+ 40.14    0.184282          18     10027           read
+  0.17    0.000786         785         1           execve
+  0.15    0.000709          78         9           openat
+  0.08    0.000374          46         8           mmap
+  0.06    0.000266          88         3           mprotect
+  0.04    0.000186          20         9           close
+  0.02    0.000109          54         2           unlink
+  0.02    0.000107         107         1           munmap
+  0.02    0.000095          23         4           newfstatat
+  0.02    0.000081          27         3           brk
+  0.01    0.000039          39         1         1 access
+  0.01    0.000028          13         2           pread64
+  0.01    0.000026          26         1           prlimit64
+  0.00    0.000020          19         1           getrandom
+  0.00    0.000019          19         1         1 rseq
+  0.00    0.000014          14         1           arch_prctl
+  0.00    0.000009           8         1           set_robust_list
+  0.00    0.000008           8         1           set_tid_address
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.459042          22     20103         2 total
