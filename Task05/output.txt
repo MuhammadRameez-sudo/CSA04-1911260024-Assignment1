@@ -1,0 +1,66 @@
+execve(0x7ee20ab92c7f, 0x7ee20ab92ab0, 0x7ee20ab92ac0) = 0
+brk(0x0, 0x7ee2e46729bc, 0x0) = 94550278909952
+mmap(0x0, 0x2000, 0x3) = 139599345905664
+access(0x7ef7016f62a0, 0x4, 0x0) = -2
+openat(-100, 0x7ef7016f50b1, 0x80000) = 3
+newfstatat(0x3, 0x7ef7016f5c99, 0x7ee2e4671ba0) = 0
+mmap(0x0, 0xa86f, 0x1) = 139599345860608
+close(3) = 0
+openat(-100, 0x7ef7016c7140, 0x80000) = 3
+read(3, 0x7ee2e4671d08, 832) = 832
+pread64(0x3, 0x7ee2e4671920, 0x310) = 784
+newfstatat(0x3, 0x7ef7016f5c99, 0x7ee2e4671ba0) = 0
+pread64(0x3, 0x7ee2e46717f0, 0x310) = 784
+mmap(0x0, 0x1e1f50, 0x1) = 139599343886336
+mmap(0x7ef701500000, 0x156000, 0x5) = 139599344041984
+mmap(0x7ef701656000, 0x53000, 0x1) = 139599345442816
+mmap(0x7ef7016a9000, 0x6000, 0x3) = 139599345782784
+mmap(0x7ef7016af000, 0xcf50, 0x3) = 139599345807360
+close(3) = 0
+mmap(0x0, 0x3000, 0x3) = 139599343874048
+arch_prctl(0x1002, 0x7ef7014d7740, 0x0) = 0
+set_tid_address(0x7ef7014d7a10, 0x7ef7014d7740, 0x7ef7017000d8) = 1726
+set_robust_list(0x7ef7014d7a20, 0x18, 0x7ef7017000d8) = 0
+rseq(0x7ef7014d8060, 0x20, 0x0) = -38
+mprotect(0x7ef7016a9000, 0x4000, 0x1) = 0
+mprotect(0x55fe33c99000, 0x1000, 0x1) = 0
+mprotect(0x7ef7016fd000, 0x2000, 0x1) = 0
+prlimit64(0x0, 0x3, 0x0) = 0
+munmap(0x7ef7016bc000, 0xa86f, 0x7ef7016ff020) = 0
+openat(-100, 0x55fe33c98031, 0x242) = 3
+write(3, 0x55fe33c98008, 40) = 40
+lseek(0x3, 0x0, 0x0) = 0
+read(3, 0x7ee2e4672950, 63) = 40
+close(3) = 0
+unlink(0x55fe33c98031, 0x7ee2e4672950, 0x3f) = 0
+newfstatat(0x1, 0x7ef701670dd5, 0x7ee2e46721f0) = 0
+getrandom(0x7ef7016b4478, 0x8, 0x1) = 8
+brk(0x0, 0x7ef7016adc60, 0x0) = 94550278909952
+brk(0x55fe33cbc000, 0x7ef7016adc60, 0x7ef7016b5338) = 94550279045120
+Transferred 40 bytes written, 40 bytes read: PATIENT_VITALS: HR=78 SpO2=98 BP=120/80
+write(1, 0x55fe33c9b2a0, 85) = 85
+Transferred 40 bytes written, 40 bytes read: PATIENT_VITALS: HR=78 SpO2=98 BP=120/80
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 32.78    0.000828         827         1           execve
+ 20.23    0.000511          63         8           mmap
+  9.20    0.000232          77         3           openat
+  7.99    0.000202          67         3           mprotect
+  5.33    0.000135          67         2           write
+  4.32    0.000109         108         1           munmap
+  3.54    0.000089          89         1         1 rseq
+  2.68    0.000068          22         3           newfstatat
+  2.27    0.000057          57         1           unlink
+  1.92    0.000048          24         2           read
+  1.81    0.000046          15         3           close
+  1.72    0.000043          14         3           brk
+  1.25    0.000032          31         1         1 access
+  1.25    0.000031          15         2           pread64
+  0.93    0.000024          23         1           getrandom
+  0.88    0.000022          22         1           set_robust_list
+  0.69    0.000017          17         1           prlimit64
+  0.51    0.000013          12         1           arch_prctl
+  0.38    0.000010           9         1           lseek
+  0.31    0.000008           7         1           set_tid_address
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.002525          63        40         2 total
