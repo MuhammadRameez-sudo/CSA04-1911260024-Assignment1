@@ -1,0 +1,8 @@
+Testing Ring-3 User-Mode Hardware Protection against Privileged Instructions (cli):
+  Hardware Trap Triggered: User process attempting 'cli' killed by signal 11 (SIGSEGV/GPF).
+  Result: Bedside monitor timer and alarm interrupts remain strictly protected.
+
+Polling vs Interrupt-Driven Monitor Analysis (10 ms alarm deadline):
+  Interrupt-driven latency : ~0.005 ms (5 us)  | Idle CPU waste : < 0.1%
+  Tight Polling loop       : ~0.001 ms         | Idle CPU waste : 100.0% (drains battery/heats CPU)
+  Periodic Polling (T=8ms) : Worst-case 8.0 ms | Risk: misses 10ms deadline if processing >= 2ms
