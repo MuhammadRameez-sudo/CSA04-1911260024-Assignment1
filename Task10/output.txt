@@ -1,0 +1,16 @@
+=== Part 1: 1 MB File Copy — Buffer Size vs Syscalls, User Time, Kernel Time ===
+Buffer(B)    | read() Calls | write() Calls |     Real(ms) |     User(ms) | Sys/Kernel(ms)
+------------------------------------------------------------------------------------------
+           1 |      1048577 |      1048576 |     19928.41 |     15170.00 |      3580.00
+          64 |        16385 |        16384 |       524.71 |       410.00 |        50.00
+         512 |         2049 |         2048 |        34.94 |        30.00 |         0.00
+        4096 |          257 |          256 |         5.43 |         0.00 |        10.00
+       65536 |           17 |           16 |         1.75 |         0.00 |         0.00
+
+=== Part 2: Creating 1,000 Processes (fork) vs 1,000 POSIX Threads ===
+  1,000 Processes (fork+waitpid)       :  4158.27 ms total (4158.3 us/proc, kernel: 380.00 ms)
+  1,000 Threads (pthread_create+join)  :   124.65 ms total ( 124.6 us/thread, kernel: 30.00 ms)
+  Speedup (Threads vs Processes)       :    33.36x faster
+real 24.80
+user 18.66
+sys 5.34
