@@ -1,0 +1,14 @@
+MRI Image Transfer Analysis (500 MB = 524288000 bytes, 4-byte words):
+  Interrupt-Driven I/O (1 interrupt/word):
+    Total Interrupts : 131072000 (1.342 x 10^8 interrupts)
+    CPU Time Spent   : 262.14 seconds (at 2.0 us per ISR)
+  Direct Memory Access (DMA):
+    Total Interrupts : 1 (transfer-completion interrupt)
+    CPU Time Spent   : 0.00005 seconds (50 us setup + completion)
+    CPU Overhead Reduction Factor : 5242880x
+
+Database Record Lookup Effective Access Time (RAM Cache = 10 ns, NVMe SSD = 100,000 ns):
+  Hit Ratio   0.0% -> EAT =  100010.0 ns (100.01 us)
+  Hit Ratio  50.0% -> EAT =   50010.0 ns ( 50.01 us)
+  Hit Ratio  90.0% -> EAT =   10010.0 ns ( 10.01 us)
+  Hit Ratio  99.0% -> EAT =    1010.0 ns (  1.01 us)
